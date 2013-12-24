@@ -122,11 +122,11 @@ body {
 }
 
 #special-active-menu-2 {
-	background-color: #1abc9c !important;
+	background-color: #e74c3c !important;
 }
 
 #special-active-menu-3 {
-	background-color: #e74c3c !important;
+	background-color: #1abc9c !important;
 }
 
 #special-active-menu-4 {
@@ -183,11 +183,11 @@ body {
 	}
 	
 	.nav li[data-slide="2"] {
-		background-color: #1abc9c;
+		background-color: #e74c3c;
 	}
 	
 	.nav li[data-slide="3"] {
-		background-color: #e74c3c;
+		background-color: #1abc9c;
 	}
 	
 	.nav li[data-slide="4"] {
@@ -302,7 +302,7 @@ body {
 }
 
 #slide-2 {
-	background-color: #1abc9c;
+	background-color: #e74c3c;
 	color: #e4e6e5;
 	padding-top: 90px;
 }
@@ -609,4 +609,11 @@ body {
 
 .navigation-slide {
 	cursor: pointer;
+}
+
+.fancybox-title {
+    position:absolute;
+    width:160px;
+    left:-160px;
+    bottom: 20px;
 }
