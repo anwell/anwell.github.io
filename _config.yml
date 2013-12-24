@@ -1,20 +1,19 @@
-title:            Balzac
-tagline:          A beautiful theme.
-description:      Describe your website.
+title:            Anwell
+tagline:          Designer, Developer, Entrepreneur.
+description:      Anwell Wang's website and blog.
 #Comment out url when working locally to resolve base urls correctly
-url: http://jekyll.gtat.me
+url: http://anwell.me
 
 # Owner/author information
 owner:
-  name:           Cole Townsend
+  name:           Anwell Wang
   avatar:         avatar.png
   bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        twnsndco        
-  github:         coletownsend       
-  instagram:      ctrunsthis     
-  dribbble:       coletownsend
-  disqus:         balzac
+  email:          anwell@anwell.me
+  twitter:        anwellw        
+  github:         anwell       
+  instagram:      anwellw     
+  # disqus:         balzac
   # Plug in your disqus shortname!
   
 
