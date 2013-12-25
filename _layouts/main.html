@@ -132,6 +132,15 @@
             	<div class="col-12 font-light"><span class="font-semibold"><a href="/articles">{{ page.title }}</span></div>
             </div>
             <div class="row">
+				{% for post in site.posts | limit:1 %}
+				<div class="deets blog-top" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
+				    <p class="blog"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
+				    <p class="blog">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 240 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 240 }}{% endif %}</p>
+				</div>
+				{% endfor %}
+			</div>
+            <!-- <div class="row">
 				{% for post in site.posts | limit:2 %}
 				<div class="deets col-6 blog-top" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 				    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -139,8 +148,8 @@
 				    <p class="blog">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 240 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 240 }}{% endif %}</p>
 				</div>
 				{% endfor %}
-			</div>
-			<div class="row">
+			</div> -->
+			<!-- <div class="row">
 				{% for post in site.posts | reversed limit:2 %}
 				<div class="deets col-6" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 				    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -148,7 +157,8 @@
 				    <p class="blog">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 240 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 240 }}{% endif %}</p>
 				</div>
 				{% endfor %}
-			</div>
+			</div> -->
+			<a class="blog" href="/articles">Read more &raquo;</a>
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
 	
@@ -206,7 +216,7 @@
 	  $(function(){
 	      $(".type").typed({
 	        strings: ["", "DEVELOPER", "DESIGNER", "ENTREPRENEUR"],
-	        typeSpeed: 30,
+	        typeSpeed: 60,
 	        backDelay: 500
 	      });
 	  });
