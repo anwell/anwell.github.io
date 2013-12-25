@@ -1,32 +1,36 @@
 title:            Anwell
-tagline:          "Designer, Developer, Entrepreneur."
-description:      "Anwell Wang's website and blog."
+tagline:          Designer, Developer, Entrepreneur.
+description:      Anwell Wang's website and blog.
 #Comment out url when working locally to resolve base urls correctly
-#url: http://anwell.me
+url: http://anwell.me
 
 # Owner/author information
 owner:
-  name:           "Anwell Wang"
-  bio:            "I <3 Seattle"
+  name:           Anwell Wang
+  avatar:         avatar.png
+  bio:            "Aesthete & Athlete"
   email:          anwell@anwell.me
   twitter:        anwellw        
   github:         anwell       
   instagram:      anwellw     
   # disqus:         balzac
   # Plug in your disqus shortname!
-
+  
 
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: blog
-    url: /articles
+  - title: About
+    url: /about
   - title: Github
     url: https://github.com/anwell
     external: true
+  - title: Anwell
+    url: http://anwell.me
+    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Los_Angeles
+timezone:    America/New_York
 future:      true
 pygments:    true
 markdown:    kramdown

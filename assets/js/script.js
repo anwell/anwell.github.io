@@ -135,7 +135,7 @@ var delay = (function(){
 
 function menu_focus( element, i ) {
 	if ( $(element).hasClass('active') ) {
-		if ( i == 6 ) {
+		if ( i == 5 ) {
 			if ( $('.navbar').hasClass('inv') == false )
 				return;
 		} else {
@@ -145,7 +145,7 @@ function menu_focus( element, i ) {
 	
 	enable_arrows( i );
 		
-	if ( i == 1 || i == 6 )
+	if ( i == 1 || i == 5 )
 		$('.navbar').removeClass('inv');
 	else
 		$('.navbar').addClass('inv');
@@ -173,7 +173,7 @@ function enable_arrows( dataslide ) {
 	if ( dataslide != 1 ) {
 		$('#arrow-up').removeClass('disabled');
 	}
-	if ( dataslide != 6 ) {
+	if ( dataslide != 5 ) {
 		$('#arrow-down').removeClass('disabled');
 	}
 	if ( dataslide == 3 ) {
