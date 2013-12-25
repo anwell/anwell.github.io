@@ -31,7 +31,7 @@ I do understand that these services oversimplify the process of deploying and ho
 Codecademy's greatest strength is that it is self-paced. Most of the students that I work with are able to go on their own, but occasionally have to ask me or a volunteer for help. For Codecademy to be fully useful, one must be able to learn from it without _any_ outside assitance.
 
 Right now, each lesson prompts a user to type something into the console which Codecademy tests for correctness. It is not unusual for a student to run into a problem they can't solve, and even though the website offers hints, oftentime learners have turn to the Q&A to scour for answers. 
-
+ ![Codecademy QA]({{ site.url }}/images/codecademy_qa.png)
 Before, I was bent on this but now I am resolved. Codecademy should have a `show answer` button with the correct code to the solution. Although a small number of students may end up blindly copying and pasting these snippets, I think it is absolutely necessary to have an option for the right answer. Students who are stuck will get discouraged and stop learning, but with the opportunity to see a solution, they may be able to correct themselves.
 
 ## Stuck in the console
