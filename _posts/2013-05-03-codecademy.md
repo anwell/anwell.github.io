@@ -20,6 +20,7 @@ But they don't know how to get a website online. "How do I get a dot-com?" Codec
 The best way to do this would probably be to partner with a static website hosting service. I introduced my students to [JS Bin](http://jsbin.com/) which shares a lot of commonalities in interface. Codecademy fortunately allows students to save projects that they work on, and all it took was one minute of copying and pasting the code into the right window to get a website hosted online to the public.
  ![JS Bin for hosting websites]({{ site.url }}/images/jsbin.png)
 There are other websites which I could see Codecademy partnering with to have a similar experience (or Codecademy could build something over their own.) These include:
+
 - [Cloud9 IDE](https://c9.io/) - A web based IDE. It would also allow students to grow as they learn more from Codecademy with support for Python, PHP, and Ruby.
 - [CodePen](http://codepen.io/) - Much like JS Bin but with a slick interface.
 - [GitHub Pages](http://pages.github.com/) - A step up in difficulty, but introduces concepts like version control.
