@@ -112,4 +112,5 @@ Some last few tips to building links and gaining traction!
 - Though not unique to cryptocurrency, tweet about it and use all the social media you can! #bitcoin gets a lot of love
 
 Coming soon: A directory of directories of bitcoin directories.
+
 *Anwell Wang is a founder at [BitTrust](http://bitcoin.org), a website that provides data on bitcoin services. [Check it out.](http://bitcoin.org)*

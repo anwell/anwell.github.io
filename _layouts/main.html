@@ -131,7 +131,7 @@
             	<div class="col-12 font-light"><span class="font-semibold with-hover-text"><a href="/articles">{{ page.title }}</span></div>
             </div>
             <div class="row with-hover-text">
-				{% for post in site.posts | limit:2 %}
+				{% for post in site.posts | limit:4 %}
 				<div class="deets col-12 col-sm-6 blog-top" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 				    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
 				    <p class="blog"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
@@ -139,15 +139,6 @@
 				</div>
 				{% endfor %}
 			</div>
-			<!-- <div class="row with-hover-text">
-				{% for post in site.posts | reversed limit:2 %}
-				<div class="deets col-12 col-sm-6" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-				    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
-				    <p class="blog"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
-				    <p class="blog">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 240 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 240 }}{% endif %}</p>
-				</div>
-				{% endfor %}
-			</div> -->
 			<a class="blog with-hover-text" href="/articles">Read more &raquo;</a>
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
