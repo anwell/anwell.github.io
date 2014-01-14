@@ -117,7 +117,7 @@
 			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='https://itunes.apple.com/us/app/mole-run/id553609578?mt=8'>MOLE RUN</a>–Help Matt the Mole get home by solving puzzles" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p05-large.jpg"><img class="thumb" src="assets/images/portfolio/p05-small.jpg" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='http://www.rainarcade.com/'>RAIN ARCADE</a>–Games for the iPhone" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p07-large.png"><img class="thumb" src="assets/images/portfolio/p07-small.png" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='http://www.windowsphone.com/en-us/store/app/ics/89b9b944-043d-433d-8f5f-4b91f1586768'>ICS APP</a>–Official high school app for the Windows Phone" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p03-large.png"><img class="thumb" src="assets/images/portfolio/p03-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="iVIZ–A powerful 3D data visualization tool (<a href='http://www.atnf.csiro.au/research/workshops/2013/astroinformatics/talks/ciro_ai2013.pdf'>presentation</a>)" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p01-large.png"><img class="thumb" src="assets/images/portfolio/p01-small.png" alt=""></a></div>
+			<div class="col-12 col-sm-6 col-lg-2"><a title="iVIZ–A powerful 3D data visualization tool (<a href='http://www.atnf.csiro.au/research/workshops/2013/astroinformatics/talks/ciro_ai2013.pdf'>presentation</a>, <a href='/articles/iviz'>blog</a>)" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p01-large.png"><img class="thumb" src="assets/images/portfolio/p01-small.png" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='http://bittrust.org'>BITTRUST</a>–Reviews and comparisons of Bitcoin services"data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p06-large.png"><img class="thumb" src="assets/images/portfolio/p06-small.png" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a title="ICS GRADUATION–High school graduation ticketing website" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p02-large.png"><img class="thumb" src="assets/images/portfolio/p02-small.png" alt=""></a></div>
 			<div class="col-12 col-sm-6 col-lg-2"><a title="HIGHER LEARNING NETWORK–Educational videos and seminars" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p04-large.png"><img class="thumb" src="assets/images/portfolio/p04-small.png" alt=""></a></div>
@@ -132,7 +132,7 @@
             </div>
             <div class="row with-hover-text">
 				{% for post in site.posts | limit:4 %}
-				<div class="deets col-12 col-sm-6 blog-top" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				<div class="deets col-12 col-sm-12 blog-top" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 				    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
 				    <p class="blog"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
 				    <p class="blog">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 240 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 240 }}{% endif %}</p>

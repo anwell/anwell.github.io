@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Promoting your New Bitcoin Business"
+title: "Promoting Your New Bitcoin Business"
 category: articles
 tags: [bitcoin, business, bittrust]
 image:

@@ -602,5 +602,6 @@ body {
 }
 
 .blog-top {
+	text-align:left;
 	padding-bottom: 60px;
 }
