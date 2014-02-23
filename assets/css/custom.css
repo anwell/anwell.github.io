@@ -1,0 +1,27 @@
+.note {
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    border-left: 3px solid rgb(87, 173, 104);
+    padding-left: 20px;
+    padding-bottom: 3px;
+    word-wrap: break-word;
+    margin-bottom: 30px;
+    margin: 0px;
+    text-rendering: optimizelegibility;
+}
+
+.wrap {
+	overflow: visible;
+}
+
+.oversized {
+	display: block;
+	margin-left: -265;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
