@@ -28,7 +28,7 @@ All images used under Creative Commons from [Kenney Vleugels](http://www.kenny.n
 </span>
 
 ## Install Unity
-[Unity3D](http://unity3d.com/unity/download) is a free game development engine. Although Unity3D has "3D" in it, its most recent version supports the creation of 2D games. When you create a game on Unity, it can be run on iOS, Android, Windows Phone, the Web, and many other platforms. When you install Unity it comes with MonoDevelop
+[Unity3D](http://unity3d.com/unity/download) is a free game development engine. Although Unity3D has "3D" in it, its most recent version supports the creation of 2D games. When you create a game on Unity, it can be run on iOS, Android, Windows Phone, the Web, and many other platforms.
 
 ![Unity3D logo](/images/unity3d-flappy-bird/unity.jpg)
 
@@ -189,7 +189,7 @@ public class Generate : MonoBehaviour
 
 In this script, we use the <code>InvokeRepeating</code> method. This will call a specific function once every several seconds. The first parameter is a string with the name of the method to call. The second is the number of seconds to delay these repeated calls. And the third parameter is the number of seconds between method calls.
 
-In the <code>CreateWall</code> method, we use <code>Instantiate</code>, a method that will generate a new prefab to the scene. And the prefab that we add to the scene is a variable called <code>rocks</code>. This variable isn't linked to our RockPair prefab yet though. To do this, drag the RockPair prefab from its folder into the empty field that says rocks in the Inspector. Follow this video:
+In the <code>CreateObstacle</code> method, we use <code>Instantiate</code>, a method that will generate a new prefab to the scene. And the prefab that we add to the scene is a variable called <code>rocks</code>. This variable isn't linked to our RockPair prefab yet though. To do this, drag the RockPair prefab from its folder into the empty field that says rocks in the Inspector. Follow this video:
 
 <iframe src="http://gfycat.com/iframe/TartSmoothAlaskajingle" frameborder="0" scrolling="no" width="1228" height="762" class="oversized"></iframe>
 
@@ -256,7 +256,7 @@ public class Player : MonoBehaviour
 Run the game. The game should restart every time the player crashes or goes off screen.
 
 ## Add a touch of randomness
-If you try to play the game now, it can be a little... boring. We need to vary the height of the rocks to make it more challenging. Udpate your <code>Rocks.cs</code> file.
+If you try to play the game now, it can be a little... boring. We need to vary the height of the rocks to make it more challenging. Update your <code>Obstacle.cs</code> file.
 {% highlight csharp %}
 using UnityEngine;
 
