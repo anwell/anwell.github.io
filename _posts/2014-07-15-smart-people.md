@@ -11,16 +11,21 @@ Here's a quick anecdote which made me rethink my views on intelligence.
 
 Last summer I went on a three day backpacking trip to Mt. Pinos in Los Padres National Forest (I highly recommend it). This was during my [internship working on iViz](http://anwell.me/articles/iviz). Nearly all of the other campers were students at the California Institute of Technology or interns working with NASA's Jet Propulsion Laboratory.
 
+![Mt Pinos](smart/pinos.jpg)
+
 ## On Another Planet
 
 On the first night after a long day of hiking we set up the tents and spent hours watching the sun set and the stars appear. This was my first time looking at a sky untarnished by light pollution. I saw satellites fly across the sky and shooting stars. Most interestingly, I saw brighter lights in the sky which I was told weren't stars but were actually planets. I spotted a a bright yellow light in the horizon opposite the sun at sunset. "What planet is that?" was my immediate thought. I instinctively reached for my phone to Google it or install some app that would name the objects in the sky but realized I was miles away from cell reception. So I dropped it.
 
 "My guess is that's Saturn," said the person standing next to me.
+
 "How do you know?"
+
 "Using Cassini's images." Cassini is a space orbiter which studies Saturn and its natural satellites. Days before our trip, Cassini sent home gorgeous photographs of the Earth, Saturn, and Saturn's rings.
 
-[!Earth's a tiny blue dot](smart/cassini1.jpg)
-[!These photos were taken from a long ways away](smart/cassini2.jpg)
+![Earth's a tiny blue dot](smart/cassini1.jpg)
+
+![These photos were taken from a long ways away](smart/cassini2.jpg)
 
 Cassini was able to take these images because Saturn was aligned in a way that it blocked out the bright light of the sun. (On an unrelated note, there's a really cool [JPL project](http://www.jpl.nasa.gov/news/news.php?release=2014-089) that aims to do the same thing with a gigantic unfolding flower.)
 
