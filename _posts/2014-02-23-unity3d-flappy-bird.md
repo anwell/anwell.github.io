@@ -79,6 +79,8 @@ Save this image to the <code>Textures</code> folder. Drag and drop it into the s
 <img src="/images/unity3d-flappy-bird/player.png" style="width:88px;" alt="player sprite">
 <figcaption>Add to textures folder</figcaption><br>
 </figure>
+Set the value of *Z* in the right side bar under *Transform* to `-1`. This ensures that the player will always be in the front.
+
 In the inspector, click *Add Component*, type "Rigidbody 2D", and press enter. A Rigidbody component gives the airplane gravity and other physics characteristics.
 
 <iframe src="http://gfycat.com/iframe/OnlyLividDassie" frameborder="0" scrolling="no" width="276" height="704" class="center"></iframe>
