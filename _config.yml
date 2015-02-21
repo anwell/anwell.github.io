@@ -2,7 +2,7 @@ title:            Anwell
 tagline:          "Designer, Developer, Entrepreneur."
 description:      "Anwell Wang's website and blog."
 #Comment out url when working locally to resolve base urls correctly
-#url: http://anwell.me
+url: http://anwell.me/
 
 # Owner/author information
 owner:
