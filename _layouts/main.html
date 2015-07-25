@@ -1,236 +1,99 @@
-<!doctype html>
-<html>
-<head lang="en">
+<!DOCTYPE html>
 <!--
-          _____                    _____                    _____                    _____                    _____            _____  
-         /\    \                  /\    \                  /\    \                  /\    \                  /\    \          /\    \ 
+          _____                    _____                    _____                    _____                    _____            _____
+         /\    \                  /\    \                  /\    \                  /\    \                  /\    \          /\    \
         /::\    \                /::\____\                /::\____\                /::\    \                /::\____\        /::\____\
        /::::\    \              /::::|   |               /:::/    /               /::::\    \              /:::/    /       /:::/    /
-      /::::::\    \            /:::::|   |              /:::/   _/___            /::::::\    \            /:::/    /       /:::/    / 
-     /:::/\:::\    \          /::::::|   |             /:::/   /\    \          /:::/\:::\    \          /:::/    /       /:::/    /  
-    /:::/__\:::\    \        /:::/|::|   |            /:::/   /::\____\        /:::/__\:::\    \        /:::/    /       /:::/    /   
-   /::::\   \:::\    \      /:::/ |::|   |           /:::/   /:::/    /       /::::\   \:::\    \      /:::/    /       /:::/    /    
-  /::::::\   \:::\    \    /:::/  |::|   | _____    /:::/   /:::/   _/___    /::::::\   \:::\    \    /:::/    /       /:::/    /     
- /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \  /:::/___/:::/   /\    \  /:::/\:::\   \:::\    \  /:::/    /       /:::/    /      
-/:::/  \:::\   \:::\____\/:: /    |::|   /::\____\|:::|   /:::/   /::\____\/:::/__\:::\   \:::\____\/:::/____/       /:::/____/       
-\::/    \:::\  /:::/    /\::/    /|::|  /:::/    /|:::|__/:::/   /:::/    /\:::\   \:::\   \::/    /\:::\    \       \:::\    \       
- \/____/ \:::\/:::/    /  \/____/ |::| /:::/    /  \:::\/:::/   /:::/    /  \:::\   \:::\   \/____/  \:::\    \       \:::\    \      
-          \::::::/    /           |::|/:::/    /    \::::::/   /:::/    /    \:::\   \:::\    \       \:::\    \       \:::\    \     
-           \::::/    /            |::::::/    /      \::::/___/:::/    /      \:::\   \:::\____\       \:::\    \       \:::\    \    
-           /:::/    /             |:::::/    /        \:::\__/:::/    /        \:::\   \::/    /        \:::\    \       \:::\    \   
-          /:::/    /              |::::/    /          \::::::::/    /          \:::\   \/____/          \:::\    \       \:::\    \  
-         /:::/    /               /:::/    /            \::::::/    /            \:::\    \               \:::\    \       \:::\    \ 
+      /::::::\    \            /:::::|   |              /:::/   _/___            /::::::\    \            /:::/    /       /:::/    /
+     /:::/\:::\    \          /::::::|   |             /:::/   /\    \          /:::/\:::\    \          /:::/    /       /:::/    /
+    /:::/__\:::\    \        /:::/|::|   |            /:::/   /::\____\        /:::/__\:::\    \        /:::/    /       /:::/    /
+   /::::\   \:::\    \      /:::/ |::|   |           /:::/   /:::/    /       /::::\   \:::\    \      /:::/    /       /:::/    /
+  /::::::\   \:::\    \    /:::/  |::|   | _____    /:::/   /:::/   _/___    /::::::\   \:::\    \    /:::/    /       /:::/    /
+ /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \  /:::/___/:::/   /\    \  /:::/\:::\   \:::\    \  /:::/    /       /:::/    /
+/:::/  \:::\   \:::\____\/:: /    |::|   /::\____\|:::|   /:::/   /::\____\/:::/__\:::\   \:::\____\/:::/____/       /:::/____/
+\::/    \:::\  /:::/    /\::/    /|::|  /:::/    /|:::|__/:::/   /:::/    /\:::\   \:::\   \::/    /\:::\    \       \:::\    \
+ \/____/ \:::\/:::/    /  \/____/ |::| /:::/    /  \:::\/:::/   /:::/    /  \:::\   \:::\   \/____/  \:::\    \       \:::\    \
+          \::::::/    /           |::|/:::/    /    \::::::/   /:::/    /    \:::\   \:::\    \       \:::\    \       \:::\    \
+           \::::/    /            |::::::/    /      \::::/___/:::/    /      \:::\   \:::\____\       \:::\    \       \:::\    \
+           /:::/    /             |:::::/    /        \:::\__/:::/    /        \:::\   \::/    /        \:::\    \       \:::\    \
+          /:::/    /              |::::/    /          \::::::::/    /          \:::\   \/____/          \:::\    \       \:::\    \
+         /:::/    /               /:::/    /            \::::::/    /            \:::\    \               \:::\    \       \:::\    \
         /:::/    /               /:::/    /              \::::/    /              \:::\____\               \:::\____\       \:::\____\
         \::/    /                \::/    /                \::/____/                \::/    /                \::/    /        \::/    /
-         \/____/                  \/____/                  ~~                       \/____/                  \/____/          \/____/ 
-                                                                                                                                      
+         \/____/                  \/____/                  ~~                       \/____/                  \/____/          \/____/
+
 -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	
-	<title>Anwell Wang—Developer and Designer</title> 
-	<meta name="description" content="Anwell Wang—Developer and Designer" />	    
-	<meta property="og:title" content="">
+<html>
+  <head>
+    <title>Anwell Wang</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  </head>
+  <body>
+    <div id="gamecanvas"></div>
+    <div class="main">
+      Hi, I'm <strong>Anwell</strong>, a student at the <strong>University of Washington</strong> studying <strong>Computer Science</strong>. I'm interested in open data tech, data science/visualization, and bitcoin.
+      <h2>Projects</h2>
+      <div class="section group">
+        <div class="col span_1_of_2">
+          <img class="project" src="assets/images/BitTrust.png" />
+          BitTrust--A platform where users can write reviews for and find Bitcoin exchanges, services, and merchants.
+        </div>
+        <div class="col span_1_of_2">
+          <img class="project" src="assets/images/dubhacks.png" />
+          DubHacks Member of the organizing team for the first collegiate hackathon in the Northwest at the University of Washington.
+        </div>
+      </div>
+      <h2>Work</h2>
+      <div class="section group">
+        <div class="col span_1_of_4">
+          <div class="work">
+            <img src="assets/images/yelp-red.png">
+            <img class="top" src="assets/images/yelp.png">
+          </div>
+          <em>(current) </em>Backend infrastructure for internationalization and localization of main website.
+        </div>
+        <div class="col span_1_of_4">
+          <div class="work">
+            <img src="assets/images/jpl-red.png">
+            <img class="top" src="assets/images/jpl.png">
+          </div>
+          Integration and creation of data analysis & visualization tools such as Bokeh and Apache Spark for scientific datasets.
+        </div>
+        <div class="col span_1_of_4">
+          <div class="work">
+            <img src="assets/images/pitchbook-red.png">
+            <img class="top" src="assets/images/pitchbook.png">
+          </div>
+          Design of data visualizations for venture capital and private equity financial datasets.
+        </div>
+        <div class="col span_1_of_4">
+          <div class="work">
+            <img src="assets/images/caltech-red.png">
+            <img class="top" src="assets/images/caltech.png">
+          </div>
+          Interactive and immersive data visualization of large astronomical and scientific datasets.
+        </div>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p><a href="mailto:anwell@anwell.me">anwell@anwell.me</p>
+        <p><a href="https://github.com/anwell">github/anwell</a></p>
+        <p><a href="https://www.linkedin.com/in/anwell">linkedin/anwell</a></p>
+      </div>
+    <div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" rel="stylesheet">
-	
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
-	
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	
-	
-	<link rel="prefetch" href="assets/images/zoom.png">
-		
-</head>
-
-<body>
-	<div class="navbar navbar-fixed-top" data-activeslide="1">
-		<div class="container">
-		
-			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			
-			
-			<div class="nav-collapse collapse navbar-responsive-collapse">
-				<ul class="nav row">
-					<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
-					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span> <span class="text">ABOUT</span></a></li>
-					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PROJECTS</span></a></li>
-					<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-pencil"></span> <span class="text">BLOG</span></a></li>
-					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
-				</ul>
-				<div class="row">
-					<div class="col-sm-2 active-menu"></div>
-				</div>
-			</div><!-- /.nav-collapse -->
-		</div><!-- /.container -->
-	</div><!-- /.navbar -->
-	
-	
-	<!-- === Arrows === -->
-	<div id="arrows">
-		<div id="arrow-up" class="disabled"></div>
-		<div id="arrow-down"></div>
-		<div id="arrow-left" class="disabled visible-lg"></div>
-		<div id="arrow-right" class="disabled visible-lg"></div>
-	</div><!-- /.arrows -->
-	
-	
-	<!-- === MAIN Background === -->
-	<div class="slide story" id="slide-1" data-slide="1">
-		<div class="container">
-			<div id="home-row-1" class="row clearfix">
-				<div class="col-12">
-					<h1 class="font-semibold type"></span></h1>
-				</div><!-- /col-12 -->
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</div><!-- /slide1 -->
-	
-	<!-- === Slide 2 === -->
-	<div class="slide story" id="slide-2" data-slide="2">
-		<div class="container">
-			<div class="row title-row">
-				<div class="col-12 font-thin"><span class="font-semibold">Developer</span> and <span class="font-semibold">designer</span></div>
-			</div><!-- /row -->
-			<div class="row line-row">
-				<div class="hr">&nbsp;</div>
-			</div><!-- /row -->
-			<div class="row subtitle-row">
-				<div class="col-12 font-thin">Check out some of my <span class="font-semibold">projects:</span></div>
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</div><!-- /slide2 -->
-	
-	<!-- === SLide 3 - Projects -->
-	<div class="slide story" id="slide-3" data-slide="3">
-		<div class="row">
-			<div class="col-12 col-sm-6 col-lg-2"><a title="ENLIGHTEN–Flashlight app for Android" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p08-large.png"><img class="thumb" src="assets/images/portfolio/p08-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="COLORBOT–An addicting, fast-paced game for the iPhone" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p09-large.png"><img class="thumb" src="assets/images/portfolio/p09-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title='"GEOMETRIC SUNSET"–Paint on canvas' data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p10-large.jpg"><img class="thumb" src="assets/images/portfolio/p10-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='https://itunes.apple.com/us/app/mole-run/id553609578?mt=8'>MOLE RUN</a>–Help Matt the Mole get home by solving puzzles" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p05-large.jpg"><img class="thumb" src="assets/images/portfolio/p05-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='http://www.rainarcade.com/'>RAIN ARCADE</a>–Games for the iPhone" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p07-large.png"><img class="thumb" src="assets/images/portfolio/p07-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='http://www.windowsphone.com/en-us/store/app/ics/89b9b944-043d-433d-8f5f-4b91f1586768'>ICS APP</a>–Official high school app for the Windows Phone" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p03-large.png"><img class="thumb" src="assets/images/portfolio/p03-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="iVIZ–A powerful 3D data visualization tool (<a href='http://www.atnf.csiro.au/research/workshops/2013/astroinformatics/talks/ciro_ai2013.pdf'>presentation</a>, <a href='/articles/iviz'>blog</a>)" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p01-large.png"><img class="thumb" src="assets/images/portfolio/p01-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="<a href='http://bittrust.org'>BITTRUST</a>–Reviews and comparisons of Bitcoin services"data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p06-large.png"><img class="thumb" src="assets/images/portfolio/p06-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="ICS GRADUATION–High school graduation ticketing website" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p02-large.png"><img class="thumb" src="assets/images/portfolio/p02-small.png" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a title="HIGHER LEARNING NETWORK–Educational videos and seminars" data-fancybox-group="portfolio" class="fancybox" href="assets/images/portfolio/p04-large.png"><img class="thumb" src="assets/images/portfolio/p04-small.png" alt=""></a></div>
-		</div><!-- /row -->
-	</div><!-- /slide3 -->
-	
-	<!-- === Slide 4 - Blog === -->
-	<div class="slide story" id="slide-4" data-slide="4">
-		<div class="container">
-			<div class="row title-row">
-            	<div class="col-12 font-light"><span class="font-semibold with-hover-text"><a href="/articles">{{ page.title }}</span></div>
-            </div>
-            <div class="row with-hover-text">
-				{% for post in site.posts | limit:4 %}
-				<div class="deets col-12 col-sm-12 blog-top" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-				    <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
-				    <p class="blog"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
-				    <p class="blog">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 240 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 240 }}{% endif %}</p>
-				</div>
-				{% endfor %}
-			</div>
-			<a class="blog with-hover-text" href="/articles">Read more &raquo;</a>
-		</div><!-- /container -->
-	</div><!-- /slide4 -->
-	
-	
-	<!-- === Slide 5 / Contact === -->
-	<div class="slide story" id="slide-5" data-slide="5">
-		<div class="container">
-			<div class="row title-row">
-				<div class="col-12 font-light">Say <span class="font-semibold">hello</span> :)</div>
-			</div><!-- /row -->
-			<div class="row line-row">
-				<div class="hr">&nbsp;</div>
-			</div><!-- /row -->
-			<div id="contact-row-4" class="row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="tel:425-954-3219"><i class="icon icon-phone"></i></a></p>
-					<span class="hover-text font-light ">+1 425-954-3219</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="mailto:anwell@anwell.me"><i class="icon icon-envelope"></i></a></p>
-					<span class="hover-text font-light ">anwell@anwell.me</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="https://github.com/anwell/"><i class="icon icon-github"></i></a></p>
-					<span class="hover-text font-light ">github/anwell</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="http://www.linkedin.com/in/anwell/"><i class="icon icon-linkedin"></i></a></p>
-					<span class="hover-text font-light ">in/anwell</span></a>
-				</div><!-- /col12 -->
-				<div class="col-12 col-sm-2 with-hover-text">
-					<p><a target="_blank" href="https://twitter.com/anwellw"><i class="icon icon-twitter"></i></a></p>
-					<span class="hover-text font-light ">@anwellw</span></a>
-				</div><!-- /col12 -->
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</div><!-- /Slide 5 -->
-	
-</body>
-
-	<!-- SCRIPTS -->
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/jquery-1.10.2.min.js"></script>
-	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="assets/fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
-	<script src="assets/js/script.js"></script>
-	<script src="assets/js/typed.js"></script>
-
-	<!-- typing -->
-	<script>
-	  $(function(){
-	      $(".type").typed({
-	        strings: ["ANWELL WANG"],
-	        typeSpeed: 60,
-	        backDelay: 500
-	      });
-	  });
-	</script>
-	
-	<!-- fancybox init -->
-	<script>
-	$(document).ready(function(e) {
-		var lis = $('.nav > li');
-		menu_focus( lis[0], 1 );
-		
-		$(".fancybox").fancybox({
-			padding: 10,
-			helpers: {
-				overlay: {
-					locked: false
-				}
-			}
-		});
-	
-	});
-	</script>
-
-	<!-- Google analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-47111648-1', 'anwell.me');
-	  ga('send', 'pageview');
-
-	</script>
-
+    ga('create', 'UA-47111648-1', 'anwell.me');
+    ga('send', 'pageview');
+  </script>
 </html>

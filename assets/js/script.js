@@ -1,340 +1,134 @@
-
-$(document).ready(function(e) {
-	$('.with-hover-text, .regular-link').click(function(e){
-		e.stopPropagation();
-	});
-	
-	/***************
-	* = Hover text *
-	* Hover text for the last slide
-	***************/
-	$('.with-hover-text').hover(
-		function(e) {
-			$(this).css('overflow', 'visible');
-			$(this).find('.hover-text')
-				.show()
-				.css('opacity', 0)
-				.delay(200)
-				.animate(
-					{
-						paddingTop: '25px',
-						opacity: 1
-					},
-					'fast',
-					'linear'
-				);
-		},
-		function(e) {
-			var obj = $(this);
-			$(this).find('.hover-text')
-				.animate(
-					{
-						paddingTop: '0',
-						opacity: 0
-					},
-					'fast',
-					'linear',
-					function() {
-						$(this).hide();
-						$( obj ).css('overflow', 'hidden');
-					}
-				);
-		}
-	);
-	
-	var img_loaded = 0;
-	var j_images = [];
-	
-	/*************************
-	* = Controls active menu *
-	* Hover text for the last slide
-	*************************/
-	$('#slide-3 img').each(function(index, element) {
-		var time = new Date().getTime();
-		var oldHref = $(this).attr('src');
-		var myImg = $('<img />').attr('src', oldHref + '?' + time );
-		
-		myImg.load(function(e) {
-			img_loaded += 1;;
-			if ( img_loaded == $('#slide-3 img').length ) {
-				$(function() {
-					var pause = 10;
-					$(document).scroll(function(e) {
-						delay(function() {
-							
-							var tops = [];
-							
-							$('.story').each(function(index, element) {
-								tops.push( $(element).offset().top - 200 );
-							});
-				
-							var scroll_top = $(this).scrollTop();
-							
-							var lis = $('.nav > li');
-							
-							for ( var i=tops.length-1; i>=0; i-- ) {
-								if ( scroll_top >= tops[i] ) {
-									menu_focus( lis[i], i+1 );
-									break;
-								}
-							}
-						},
-						pause);
-					});
-					$(document).scroll();
-				});
-			}
-		});
-	});
-	
-});
-
-/******************
-* = Gallery width *
-******************/
-$(function() {
-	var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
-	$(window).resize(function() {
-		delay(function() {
-				var gallery_images = $('#slide-3 img');
-				
-				var images_per_row = 0;
-				if ( gallery_images.length % 2 == 0 ) {
-					images_per_row = gallery_images.length / 2;
-				} else {
-					images_per_row = gallery_images.length / 2 + 1;
-				}
-				
-				var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
-				gallery_width /= 2;
-				if ( $('#slide-3 img').length % 2 != 0 ) {
-					gallery_width += $('#slide-3 img').width();
-				}
-				
-				$('#slide-3 .row').css('width', gallery_width );
-				
-				var left_pos = $('#slide-3 .row').width() - $('body').width();
-				left_pos /= -2;
-				
-				$('#slide-3 .row').css('left', left_pos);
-			
-			},
-			pause
-		);
-	});
-	$(window).resize();
-});
-
-var delay = (function(){
-	var timer = 0;
-	return function(callback, ms){
-		clearTimeout (timer);
-		timer = setTimeout(callback, ms);
-	};
-})();
-
-function menu_focus( element, i ) {
-	if ( $(element).hasClass('active') ) {
-		if ( i == 5 ) {
-			if ( $('.navbar').hasClass('inv') == false )
-				return;
-		} else {
-			return;
-		}
-	}
-	
-	enable_arrows( i );
-		
-	if ( i == 1 || i == 5 )
-		$('.navbar').removeClass('inv');
-	else
-		$('.navbar').addClass('inv');
-	
-	$('.nav > li').removeClass('active');
-	$(element).addClass('active');
-	
-	var icon = $(element).find('.icon');
-	
-	var left_pos = icon.offset().left - $('.nav').offset().left;
-	var el_width = icon.width() + $(element).find('.text').width() + 10;
-	
-	$('.active-menu').stop(false, false).animate(
-		{
-			left: left_pos,
-			width: el_width
-		},
-		1500,
-		'easeInOutQuart'
-	);
+var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+// If not in mobile, animate
+if (w > 480) {
+    gol();
+    hover();
 }
-
-function enable_arrows( dataslide ) {
-	$('#arrows div').addClass('disabled');
-	if ( dataslide != 1 ) {
-		$('#arrow-up').removeClass('disabled');
-	}
-	if ( dataslide != 5 ) {
-		$('#arrow-down').removeClass('disabled');
-	}
-	if ( dataslide == 3 ) {
-		$('#arrow-left').removeClass('disabled');
-		$('#arrow-right').removeClass('disabled');
-	}
+function hover() {
+    d3.selectAll('.span_1_of_4')
+        .on('mouseenter', function() {
+            d3.select(this).select('.top').style('opacity', 0);
+        })
+        .on('mouseleave', function() {
+            d3.select(this).select('.top').style('opacity', 1);
+        });
 }
+function gol() {
+    var cw  = 8 // cellWidth
+      , ch  = 8 // cellHeight
+      , w   = Math.ceil(window.innerWidth / cw) * cw // window width rounded to multiple of cell width
+      , h   = Math.ceil(window.innerHeight / ch) * ch // window height rounded to multiple of cell height
 
-/*************
-* = Parallax *
-*************/
-jQuery(document).ready(function ($) {
-	//Cache some variables
-	var links = $('.nav').find('li');
-	slide = $('.slide');
-	button = $('.button');
-	mywindow = $(window);
-	htmlbody = $('html,body');
-	
-	//Create a function that will be passed a slide number and then will scroll to that slide using jquerys animate. The Jquery
-	//easing plugin is also used, so we passed in the easing method of 'easeInOutQuint' which is available throught the plugin.
-	function goToByScroll(dataslide) {
-		var offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
-		
-		htmlbody.stop(false, false).animate({
-			scrollTop: offset_top
-		}, 1500, 'easeInOutQuart');
-	}
-	
-	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
-	links.click(function (e) {
-		e.preventDefault();
-		dataslide = $(this).attr('data-slide');
-		goToByScroll(dataslide);
-		$(".nav-collapse").collapse('hide');
-	});
-	
-	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
-	$('.navigation-slide').click(function (e) {
-		e.preventDefault();
-		dataslide = $(this).attr('data-slide');
-		goToByScroll(dataslide);
-		$(".nav-collapse").collapse('hide');
-	});
-});
+      , m   = false // toggle mode on mousedown/mouseup
 
-/***************
-* = Menu hover *
-***************/
-jQuery(document).ready(function ($) {
-	//Cache some variables
-	var menu_item = $('.nav').find('li');
-	
-	menu_item.hover(
-		function(e) {
-			var icon = $(this).find('.icon');
-			
-			var left_pos = icon.offset().left - $('.nav').offset().left;
-			var el_width = icon.width() + $(this).find('.text').width() + 10;
-			
-			var hover_bar = $('<div class="active-menu special-active-menu"></div>')
-				.css('left', left_pos)
-				.css('width', el_width)
-				.attr('id', 'special-active-menu-' + $(this).data('slide') );
-			
-			$('.active-menu').after( hover_bar );
-		},
-		function(e) {
-			$('.special-active-menu').remove();
-		}
-	);
-});
+      , ccx = w/cw // cell count x
+      , ccy = h/ch // cell count y
+      , del = 100  // ms between generations
+      , xs  = d3.scale.linear().domain([0, ccx]).rangeRound([0, ccx * cw])
+      , ys  = d3.scale.linear().domain([0, ccy]).rangeRound([0, ccy * ch])
 
-/******************
-* = Gallery hover *
-******************/
-jQuery(document).ready(function ($) {
-	//Cache some variables
-	var images = $('#slide-3 a');
-	
-	images.hover(
-		function(e) {
-			var asta = $(this).find('img');
-			$('#slide-3 img').not( asta ).stop(false, false).animate(
-				{
-					opacity: .5
-				},
-				'fast',
-				'linear'
-			);
-			var zoom = $('<div class="zoom"></div>');
-			if ( $(this).hasClass('video') ) {
-				zoom.addClass('video');
-			}
-			$(this).prepend(zoom);
-		},
-		function(e) {
-			$('#slide-3 img').stop(false, false).animate(
-				{
-					opacity: 1
-				},
-				'fast',
-				'linear'
-			);
-			$('.zoom').remove();
-		}
-	);
-});
+      , states = []
+      ;
 
-/******************
-* = Arrows click  *
-******************/
-jQuery(document).ready(function ($) {
-	//Cache some variables
-	var arrows = $('#arrows div');
-	
-	arrows.click(function(e) {
-		e.preventDefault();
-		
-		if ( $(this).hasClass('disabled') )
-			return;
-		
-		var slide = null;
-		var datasheet = $('.nav > li.active').data('slide');
-		var offset_top = false;
-		var offset_left = false;
-		
-		
-		switch( $(this).attr('id') ) {
-			case 'arrow-up':
-				offset_top = ( datasheet - 1 == 1 ) ? '0px' : $('.slide[data-slide="' + (datasheet-1) + '"]').offset().top;
-				break;
-			case 'arrow-down':
-				offset_top = $('.slide[data-slide="' + (datasheet+1) + '"]').offset().top;
-				break;
-			case 'arrow-left':
-				offset_left = $('#slide-3 .row').offset().left + 452;
-				if ( offset_left > 0 ) {
-					offset_left = '0px';
-				}
-				break;
-			case 'arrow-right':
-				offset_left = $('#slide-3 .row').offset().left - 452;
-				if ( offset_left < $('body').width() - $('#slide-3 .row').width() ) {
-					offset_left = $('body').width() - $('#slide-3 .row').width();
-				}
-				break;
-		}
-		
-		if ( offset_top != false ) {
-			htmlbody.stop(false, false).animate({
-				scrollTop: offset_top
-			}, 1500, 'easeInOutQuart');
-		}
-		
-		if ( offset_left != false ) {
-			if ( $('#slide-3 .row').width() != $('body').width() ) {
-				$('#slide-3 .row').stop(false, false).animate({
-					left: offset_left
-				}, 1500, 'easeInOutQuart');
-			}
-		}
-	});
-});
+    d3.range(ccx * ccy).forEach(function(c) {
+      states[c] = false;
+    });
+
+    var custom = [
+        [0, 0, 0, 1],
+        [0, 0, 0, 1],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [0, 0, 0, 1],
+        [0, 0, 0, 1],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [1, 0, 0, 1],
+        [1, 1, 0, 1],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [1, 1, 1, 0],
+        [0, 0, 0, 1],
+        [0, 1, 1, 0],
+        [0, 0, 0, 1],
+        [1, 1, 1, 0],
+        [0, 0, 0, 0],
+        [1, 1, 1, 1],
+        [0, 1, 0, 0],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [1, 1, 1, 1],
+        [1, 0, 1, 0],
+        [1, 1, 1, 1]
+    ];
+    var node = d3.select('.main').node();
+    var xOffset = Math.floor(node.offsetLeft / cw) - custom[0].length - 2;
+    var yOffset = Math.floor((node.offsetTop + 40) / ch);
+    for (var x = 0; x < custom[0].length; x++) {
+        for (var y = 0; y < custom.length; y++) {
+            states[coord(x + xOffset, y + yOffset)] = custom[y][x] == 1;
+        }
+    }
+
+    var vis = d3.select('#gamecanvas').append('svg:svg')
+        .attr('width', w)
+        .attr('height', h);
+
+    vis.selectAll('rect')
+        .data(states)
+      .enter().append('svg:rect')
+      .attr('width', cw)
+      .attr('height', ch)
+      .attr('rx', cw)
+      .attr('ry', ch)
+      .attr('x', function(d, i) { return xs(i % ccx); })
+      .attr('y', function(d, i) { return ys(i / ccx | 0); })
+      .on('mouseup', function() { m = false; })
+      .on('mousedown', function() { m = true; })
+      .on('mousemove', function(d, i) { if (m) states[i] = !states[i]; })
+      .classed('life', function(d) { return d; });
+
+    function createNewGeneration() {
+      var c, x, y, t, r, b, l, n, nextState = [];
+      for (x = 0; x < ccx; x++) {
+        l = x - 1;
+        r = x + 1;
+        for (y = 0; y < ccy; y++) {
+          t = y - 1;
+          b = y + 1;
+          n = states[coord(l,t)] + states[coord(x,t)] + states[coord(r,t)]
+            + states[coord(l,y)] +                      states[coord(r,y)]
+            + states[coord(l,b)] + states[coord(x,b)] + states[coord(r,b)];
+
+          nextState[c = coord(x,y)] = states[c] ? n == 2 || n == 3 : n == 3;
+        }
+      }
+      return nextState;
+    }
+
+    function coord(x, y) {
+      return coord[x +','+ y] ||
+            (coord[x +','+ y] = ccx * ((ccy + y) % ccy) + ((ccx + x) % ccx));
+    }
+
+    function animate() {
+      d3.selectAll('rect')
+        .data(states = createNewGeneration())
+        .classed('life', function(d) { return d; });
+    }
+
+    var timer;
+    setTimeout(function() {
+        timer = setInterval(animate, del);
+    }, 5000)
+
+    d3.select('body').on('click', function() {
+        console.log("TESt");
+        if (timer) {
+            clearInterval(timer);
+            timer = false;
+        } else {
+            timer = setInterval(animate, del);
+        }
+    });
+}
