@@ -34,6 +34,13 @@ function gol() {
       , staysAlive = d3.range(1, 7).filter(function() { return Math.random() > 0.5; })
       ;
 
+    if (window.localStorage) {
+      if (!window.localStorage.isReturningVisitor) {
+        window.localStorage.isReturningVisitor = true;
+        born = [3];
+        staysAlive = [2, 3];
+      }
+    }
 
     var vis = d3.select('#gamecanvas').append('svg:svg')
         .attr('width', w)
