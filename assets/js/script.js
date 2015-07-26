@@ -1,11 +1,11 @@
 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 // If not in mobile, animate
-if (w > 480) {
+if (w > 850) {
     gol();
     hover();
 }
 function hover() {
-    d3.selectAll('.span_1_of_4')
+    d3.selectAll('.col')
         .on('mouseenter', function() {
             d3.select(this).select('.top').style('opacity', 0);
         })

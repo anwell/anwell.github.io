@@ -96,10 +96,18 @@ svg {
 .span_1_of_4 {
   width: 23.8%;
 }
+.project img {
+  width: 80%;
+}
+.project .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .project {
   width: 50%;
   float: left;
-  padding-right: 20px;
+  position: relative;
 }
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
