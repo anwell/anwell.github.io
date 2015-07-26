@@ -127,7 +127,7 @@ svg {
   font-family: sans-serif;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   background-color: #F3EFEE;
   opacity: 0.2;
   padding-top: 10px;
@@ -149,5 +149,11 @@ svg {
   .work img {
     height: 100%;
     width: auto;
+  }
+  .help {
+    display: none;
+  }
+  .main {
+    margin-top: 0;
   }
 }
