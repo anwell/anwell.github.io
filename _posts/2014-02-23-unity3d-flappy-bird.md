@@ -24,7 +24,7 @@ The complete project code can be found on [Github](https://github.com/anwell/Tap
 </span>
 
 <span class="note">
-All images used under Creative Commons from [Kenney Vleugels](http://www.kenny.nl)
+All images used under Creative Commons from [Kenney Vleugels](http://www.kenney.nl)
 </span>
 
 ## Install Unity
