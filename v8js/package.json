@@ -1,0 +1,28 @@
+{
+	"packages": [
+		[
+			{
+				"conflict": {
+					"heroku-sys/hhvm": "*"
+				},
+				"dist": {
+					"type": "heroku-sys-tar",
+					"url": "http://anwell.me/v8js/v8js-1.3.3-icu.tar.gz"
+				},
+				"extra": {
+					"config": "etc/php/conf.d/v8js.ini-dist"
+				},
+				"name": "heroku-sys/ext-v8js",
+				"replace": {},
+				"require": {
+					"heroku-sys/cedar": "^14.0.0",
+					"heroku-sys/php": "7.1.*",
+					"heroku/installer-plugin": "^1.2.0"
+				},
+				"time": "2016-12-05 21:56:12",
+				"type": "heroku-sys-php-extension",
+				"version": "1.3.3"
+			}
+		]
+	]
+}
