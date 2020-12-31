@@ -1,5 +1,5 @@
 title:            Anwell
-tagline:          "Designer, Developer, Entrepreneur."
+tagline:          ""
 description:      "Anwell Wang's website and blog."
 #Comment out url when working locally to resolve base urls correctly
 url: http://anwell.me
@@ -7,11 +7,11 @@ url: http://anwell.me
 # Owner/author information
 owner:
   name:           "Anwell Wang"
-  bio:            "I <3 Seattle"
+  bio:            ""
   email:          anwell@anwell.me
-  twitter:        anwellw        
-  github:         anwell       
-  instagram:      anwellw     
+  twitter:        anwellw
+  github:         anwell
+  linkedin:       anwell
   # disqus:         balzac
   # Plug in your disqus shortname!
 
@@ -20,7 +20,7 @@ owner:
 # For external links add external: true
 links:
   - title: blog
-    url: /articles
+    url: /blog
   - title: Github
     url: https://github.com/anwell
     external: true

@@ -4,6 +4,7 @@ title: "Smart People"
 description: "On people who are smarter than I am (of which there are a lot)"
 category: articles
 tags: [intelligence, education]
+published: false
 image:
   feature: "smart/saturn.jpg"
 ---

@@ -1,116 +1,30 @@
-<!DOCTYPE html>
-<!--
-          _____                    _____                    _____                    _____                    _____            _____
-         /\    \                  /\    \                  /\    \                  /\    \                  /\    \          /\    \
-        /::\    \                /::\____\                /::\____\                /::\    \                /::\____\        /::\____\
-       /::::\    \              /::::|   |               /:::/    /               /::::\    \              /:::/    /       /:::/    /
-      /::::::\    \            /:::::|   |              /:::/   _/___            /::::::\    \            /:::/    /       /:::/    /
-     /:::/\:::\    \          /::::::|   |             /:::/   /\    \          /:::/\:::\    \          /:::/    /       /:::/    /
-    /:::/__\:::\    \        /:::/|::|   |            /:::/   /::\____\        /:::/__\:::\    \        /:::/    /       /:::/    /
-   /::::\   \:::\    \      /:::/ |::|   |           /:::/   /:::/    /       /::::\   \:::\    \      /:::/    /       /:::/    /
-  /::::::\   \:::\    \    /:::/  |::|   | _____    /:::/   /:::/   _/___    /::::::\   \:::\    \    /:::/    /       /:::/    /
- /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \  /:::/___/:::/   /\    \  /:::/\:::\   \:::\    \  /:::/    /       /:::/    /
-/:::/  \:::\   \:::\____\/:: /    |::|   /::\____\|:::|   /:::/   /::\____\/:::/__\:::\   \:::\____\/:::/____/       /:::/____/
-\::/    \:::\  /:::/    /\::/    /|::|  /:::/    /|:::|__/:::/   /:::/    /\:::\   \:::\   \::/    /\:::\    \       \:::\    \
- \/____/ \:::\/:::/    /  \/____/ |::| /:::/    /  \:::\/:::/   /:::/    /  \:::\   \:::\   \/____/  \:::\    \       \:::\    \
-          \::::::/    /           |::|/:::/    /    \::::::/   /:::/    /    \:::\   \:::\    \       \:::\    \       \:::\    \
-           \::::/    /            |::::::/    /      \::::/___/:::/    /      \:::\   \:::\____\       \:::\    \       \:::\    \
-           /:::/    /             |:::::/    /        \:::\__/:::/    /        \:::\   \::/    /        \:::\    \       \:::\    \
-          /:::/    /              |::::/    /          \::::::::/    /          \:::\   \/____/          \:::\    \       \:::\    \
-         /:::/    /               /:::/    /            \::::::/    /            \:::\    \               \:::\    \       \:::\    \
-        /:::/    /               /:::/    /              \::::/    /              \:::\____\               \:::\____\       \:::\____\
-        \::/    /                \::/    /                \::/____/                \::/    /                \::/    /        \::/    /
-         \/____/                  \/____/                  ~~                       \/____/                  \/____/          \/____/
+{% include head-dark.html %}
 
--->
-<html>
-  <head>
-    <title>Anwell Wang</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  </head>
-  <body>
-    <div id="gamecanvas"></div>
-    <div class="main">
-      Hi, I'm <strong>Anwell</strong>, a student at the <strong>University of Washington</strong> studying <strong>Computer Science</strong>. I'm interested in open data tech, data science/visualization, and bitcoin.
-      <h2>Projects</h2>
-      <div class="section group">
-        <div class="col span_1_of_2">
-          <a href="http://bittrust.org">
-            <div class="project">
-              <img src="assets/images/bittrust-red.png" />
-              <img class="top" src="assets/images/bittrust.png" />
-            </div>
-          </a>
-          Created <a class="link" href="http://bittrust.org">BitTrust</a>, a platform where users can write reviews for and find Bitcoin exchanges, services, and merchants.
-        </div>
-        <div class="col span_1_of_2">
-          <a href="http://dubhacks.co">
-            <div class="project">
-              <img src="assets/images/dubhacks-red.png" />
-              <img class="top" src="assets/images/dubhacks.png" />
-            </div>
-          </a>
-          Member of the executive organizing team for <a class="link" href="http://dubhacks.co">DubHacks</a>, the first collegiate hackathon in the Northwest at the University of Washington.
-        </div>
-      </div>
-      <div class="work-header">
-        <h2>Work</h2><em class="resume">(<a class="link" href="">resume</a>)</em>
-      </div>
-      <div class="section group">
-        <div class="col span_1_of_4">
-          <div class="work">
-            <img src="assets/images/yelp-red.png">
-            <img class="top" src="assets/images/yelp.png">
-          </div>
-          <strong>Yelp</strong> <em>(current)</em><br />
-          Backend infrastructure for internationalization and localization of main website.
-        </div>
-        <div class="col span_1_of_4">
-          <div class="work">
-            <img src="assets/images/jpl-red.png">
-            <img class="top" src="assets/images/jpl.png">
-          </div>
-          <strong>NASA Jet Propulsion Lab</strong><br />
-          Integration and creation of data analysis & visualization tools such as Bokeh and Apache Spark for scientific datasets.
-        </div>
-        <div class="col span_1_of_4">
-          <div class="work">
-            <img src="assets/images/pitchbook-red.png">
-            <img class="top" src="assets/images/pitchbook.png">
-          </div>
-          <strong>PitchBook Data</strong><br />Design of <a class="link" href="http://dataviz.pitchbook.com">data visualizations</a> for venture capital and private equity financial datasets.
-        </div>
-        <div class="col span_1_of_4">
-          <div class="work">
-            <img src="assets/images/caltech-red.png">
-            <img class="top" src="assets/images/caltech.png">
-          </div>
-          <strong>Caltech</strong><br />Interactive and immersive data visualization of large astronomical and scientific datasets. (<a class="link" href="http://arxiv.org/pdf/1410.7670.pdf">paper</a>, <a class="link" href="http://anwell.me/articles/iviz/">blog</a>)
-        </div>
-      </div>
-      <div>
-        <h2>Contact</h2>
-        <p>Email: <a class="link" href="mailto:anwell@anwell.me">anwell@anwell.me</a></p>
-        <p>GitHub: <a class="link" href="https://github.com/anwell">https://github.com/anwell</a></p>
-        <p>LinkedIn: <a class="link" href="https://www.linkedin.com/in/anwell">https://www.linkedin.com/in/anwell</a></p>
-      </div>
+    <div id='bump'>
+        <section class="article archive">
+          <article class="archive-wrap">
+              <ol class="post-list">
+                 <lh><h2><span class="bb">{{ page.title }}</span></h2></lh>
+                 <p>I'm a <strong>software engineer</strong> interested in database management systems, data visualization, and big data.</p>
+                 <p>Currently, I work at <strong>Microsoft</strong> on the SQL Server team. I graduated from the <strong>University of Washington</strong> with a B.S. in Computer Science.</p>
+                 <p>
+                   <a href="mailto:{{ site.owner.email }}">Email</a>
+                   <br/>
+                   <a href="https://www.linkedin.com/in/{{ site.owner.linkedin }}/">LinkedIn</a>
+                 </p>
+                 <lh><h2><span class="bb">Blog</span></h2></lh>
+                  {% for post in site.posts %}
+                  <li>
+                    <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                        <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
+                        <p class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
+                        <p class="">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+                    </div>
+                  </li>
+                  {% endfor %}
+              </ol>
+          </article>
+        </section>
     </div>
-    <div class="help">B<input id="born" type="text">/S<input id="stays" type="text"><input id="go" type="submit" value="Go">
-      <a class="link" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Variations_on_Life">(?)</a>
-    </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-  <script src="assets/js/script.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-47111648-1', 'anwell.me');
-    ga('send', 'pageview');
-  </script>
-</html>
+{% include footer.html %}
