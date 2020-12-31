@@ -17,7 +17,7 @@ image:
 </script>
 This is a tutorial that will teach you how to make a clone of Flappy Bird called Tappy Plane using Unity3D. You should use this tutorial if you're a beginner to Unity 2D game development with some C# programming experience. Let's get started!
 
-<iframe src="http://gfycat.com/iframe/BossyUnselfishBluebottle" frameborder="0" scrolling="no" width="756" height="598" style="margin-left:-25"></iframe>
+<video height="598" width="756" playsinline autoplay muted loop tabindex="-1" style="margin-left:-25"><source src="/images/unity3d-flappy-bird/BossyUnselfishBluebottle.webm" type="video/webm"></video>
 
 <span class="note">
 The complete project code can be found on [Github](https://github.com/anwell/TappyPlane)
@@ -35,7 +35,7 @@ All images used under Creative Commons from [Kenney Vleugels](http://www.kenney.
 ## Create a new project
 When you open up Unity, this should be the first window you see.
 
-<iframe src="http://gfycat.com/iframe/LastReadyAnnashummingbird" frameborder="0" scrolling="no" width="756" height="562" ></iframe>
+<video height="562" width="756" playsinline autoplay muted loop tabindex="-1"><source src="/images/unity3d-flappy-bird/LastReadyAnnashummingbird.webm" type="video/webm"></video>
 
 Go to the *Create New Project* tab and select the folder to put it in. The name can be changed later. Change the setup defaults for at the bottom to be *2D*. Then press the *Create* button.
 
@@ -46,7 +46,7 @@ After creating the project, you should be greeted with this blank screen.
 
 Navigate over to the *Project* window at the bottom to create the folder structure you need to organize your files. Add four folders called "Prefabs", "Scenes", "Scripts", and "Textures".
 
-<iframe src="http://gfycat.com/iframe/FatDamagedKatydid" frameborder="0" scrolling="no" width="708" height="524" ></iframe>
+<video height="524" width="708" playsinline autoplay muted loop tabindex="-1"><source src="/images/unity3d-flappy-bird/FatDamagedKatydid.webm" type="video/webm"></video>
 
 Here's an explanation for what type of file each folder holds.
 
@@ -71,7 +71,7 @@ Save this image to the <code>Textures</code> folder you created.
 
 Drag the image into the center main Scene area. Using the inspector, set the scale to be <code>2.5</code> in both the *X* and *Y* fields.
 
-<iframe src="http://gfycat.com/iframe/LittleSoulfulDouglasfirbarkbeetle" frameborder="0" scrolling="no" width="1228" height="790" class="oversized"></iframe>
+<video height="790" width="1228" playsinline autoplay muted loop tabindex="-1" class="oversized"><source src="/images/unity3d-flappy-bird/LittleSoulfulDouglasfirbarkbeetle.webm" type="video/webm"></video>
 
 ## Add the player
 Save this image to the <code>Textures</code> folder. Drag and drop it into the scene just as you did with the background.
@@ -83,11 +83,11 @@ Set the value of *Z* in the right side bar under *Transform* to `-1`. This ensur
 
 In the inspector, click *Add Component*, type "Rigidbody 2D", and press enter. A Rigidbody component gives the airplane gravity and other physics characteristics.
 
-<iframe src="http://gfycat.com/iframe/OnlyLividDassie" frameborder="0" scrolling="no" width="276" height="704" class="center"></iframe>
+<video height="704" width="276" playsinline autoplay muted loop tabindex="-1" class="center"><source src="/images/unity3d-flappy-bird/OnlyLividDassie.webm" type="video/webm"></video>
 
 Press the triangle Play button at the top of the screen. You should see the plane falling as it adheres to gravity.
 
-<iframe src="http://gfycat.com/iframe/GiantWateryAfricanfisheagle" frameborder="0" scrolling="no" width="468" height="410" class="center"></iframe>
+<video height="410" width="468" playsinline autoplay muted loop tabindex="-1" class="center"><source src="/images/unity3d-flappy-bird/GiantWateryAfricanfisheagle.webm" type="video/webm"></video>
 
 ## Controlling the Player
 Now we're going to create a script that allows the player to move. Inside the Scripts folder, create a C# file called <code>Player.cs</code>. Fill the contents with this code:
@@ -133,11 +133,11 @@ Drag these two images in and once again, save them into the <code>Textures</code
 
 Position these objects so that they are above each other, to the right of the background, and wide enough apart that the player can jump through them.
 
-<iframe src="http://gfycat.com/iframe/MeekImpishArcticduck" frameborder="0" scrolling="no" width="712" height="352" ></iframe>
+<video height="352" width="712" playsinline autoplay muted loop tabindex="-1"><source src="/images/unity3d-flappy-bird/MeekImpishArcticduck.webm" type="video/webm"></video>
 
 In the file menu, go to *GameObject*->*Create Empty*. This will add an object to the scene that is invisible and will serve as a folder that holds our rock obstacles. Name it "RockPair". Drag the two rock GameObjects onto the RockPair object.
 
-<iframe src="http://gfycat.com/iframe/PowerfulFemaleBengaltiger" frameborder="0" scrolling="no" width="376" height="410" class="center" ></iframe>
+<video height="410" width="376" playsinline autoplay muted loop tabindex="-1" class="center"><source src="/images/unity3d-flappy-bird/PowerfulFemaleBengaltiger.webm" type="video/webm"></video>
 
 ## Moving the obstacles
 Add a "RigidBody 2D" component to the RockPair parent object. In the inspector, check *Is Kinematic*. This prevents the obstacles from being affected by gravity.
@@ -166,7 +166,7 @@ Add this script to the RockPair GameObject and hit the Play button. You should s
 ## Generating obstacles
 We need to create new rock obstacles every few seconds. To begin, drag the RockPair Object into the <code>Prefabs</code> folder. This turns RockPair into a Prefab, which is an object that can be created and destroyed many times. Delete the RockPair object that is in the scene.
 
-<iframe src="http://gfycat.com/iframe/CreepyFrayedDragonfly" frameborder="0" scrolling="no" width="1228" height="762" class="oversized"></iframe>
+<video height="762" width="1228" playsinline autoplay muted loop tabindex="-1" class="oversized"><source src="/images/unity3d-flappy-bird/CreepyFrayedDragonfly.webm" type="video/webm"></video>
 
 Create another Empty GameObject and rename it to "Scripts". Create another Script called <code>Generate.cs</code>. Paste this code into it and add the Generate script to the Scripts empty GameObject.
 {% highlight csharp %}
@@ -193,7 +193,7 @@ In this script, we use the <code>InvokeRepeating</code> method. This will call a
 
 In the <code>CreateObstacle</code> method, we use <code>Instantiate</code>, a method that will generate a new prefab to the scene. And the prefab that we add to the scene is a variable called <code>rocks</code>. This variable isn't linked to our RockPair prefab yet though. To do this, drag the RockPair prefab from its folder into the empty field that says rocks in the Inspector. Follow this video:
 
-<iframe src="http://gfycat.com/iframe/TartSmoothAlaskajingle" frameborder="0" scrolling="no" width="1228" height="762" class="oversized"></iframe>
+<video height="762" width="1228" playsinline autoplay muted loop tabindex="-1" class="oversized"><source src="/images/unity3d-flappy-bird/TartSmoothAlaskajingle.webm" type="video/webm"></video>
 
 Try running the code. You should see obstacles being generated every 1.5 seconds!
 
@@ -206,7 +206,7 @@ Now go to the RockPair prefab and click on the small arrow. Select the first obj
 
 A Collider component is a shape that triggers collisions to happen. Play the game and see what happens. It's a really interesting thing to watch.
 
-<iframe src="http://gfycat.com/iframe/NeighboringHeavenlyKodiakbear" frameborder="0" scrolling="no" width="1228" height="762" class="oversized"></iframe>
+<video height="762" width="1228" playsinline autoplay muted loop tabindex="-1" class="oversized"><source src="/images/unity3d-flappy-bird/NeighboringHeavenlyKodiakbear.webm" type="video/webm"></video>
 
 When the player collides with the obstacle, let's make the game restart. We're going to edit the <code>Player.cs</code> file to do this. Open the file up and edit it to look like this:
 
@@ -323,4 +323,4 @@ Here are a couple ideas on things to change:
 - Right now, we create new obstacles, but never destroy them. After a while of running, the game could slow down a lot.
 - There is no proper menu or play screen.
 
-Thanks for reading! If you enjoyed this please share, and if you have any questions, feel free to [ask me](http://anwell.me/#slide-5).
+Thanks for reading! If you enjoyed this please share, and if you have any questions, feel free to [ask me](http://anwell.me/).
